@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My account | CyberKittoi</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dashboard-page">
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="index.html">
+<b>&gt;_</b>CYBER<span>KITTOI</span>
+</a>
+<nav class="site-nav">
+<a href="index.html">Home</a>
+<a href="courses.html">Courses</a>
+<a class="active" href="account.html">Account</a>
+</nav>
+<a class="nav-action" href="login.html">Log out →</a>
+</div>
+</header>
+<main>
+<section class="dashboard-head">
+<div class="container">
+<p class="eyebrow">LEARNER PORTAL</p>
+<h1>My account</h1>
+<p>Manage your profile, learning preferences, and account security.</p>
+</div>
+</section>
+<section class="container dashboard">
+<div class="dashboard-tabs">
+<button class="selected" data-tab="profile">Profile</button>
+<button data-tab="preferences">Preferences</button>
+<button data-tab="security">Security</button>
+</div>
+<div id="profile" class="tab-panel selected">
+<div class="dash-grid">
+<section class="dash-card">
+<div class="account-summary">
+<div class="avatar">U</div>
+<div>
+<h2>Your profile</h2>
+<p>Future Cyber Defender</p>
+</div>
+</div>
+<p>Complete your profile after the backend is connected.</p>
+</section>
+<section class="dash-card">
+<h2>Learning progress</h2>
+<p>
+<strong>0 of 5</strong> learning paths started.</p>
+<a class="button outline" href="courses.html">Explore courses →</a>
+</section>
+<section class="dash-card wide">
+<h2>Personal information</h2>
+<div class="form-row">
+<div>
+<label for="full-name">Full name</label>
+<input id="full-name" placeholder="Your full name">
+</div>
+<div>
+<label for="account-email">Email address</label>
+<input id="account-email" type="email" placeholder="you@example.com">
+</div>
+</div>
+<button class="button primary demo-action" data-label="Save profile">Save profile</button>
+</section>
+</div>
+</div>
+<div id="preferences" class="tab-panel">
+<section class="dash-card">
+<h2>Learning preferences</h2>
+<p>Choose the updates and experience you want from CyberKittoi.</p>
+<label>
+<input type="checkbox" checked> Send me course progress reminders</label>
+<label>
+<input type="checkbox"> Send me new-course announcements</label>
+<label for="learning-level">Current level</label>
+<select id="learning-level">
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+</select>
+<button class="button primary demo-action" data-label="Save preferences">Save
+preferences</button>
+</section>
+</div>
+<div id="security" class="tab-panel">
+<section class="dash-card">
+<h2>Password & security</h2>
+<p>Use a unique password that you do not use on other websites.</p>
+<label for="current-password">Current password</label>
+<input id="current-password" type="password" placeholder="Current password">
+<label for="new-password">New password</label>
+<input id="new-password" type="password" placeholder="New password">
+<button class="button primary demo-action" data-label="Update password">Update
+password</button>
+</section>
+</div>
+</section>
+</main>
+<script src="script.js">
+</script>
+</body>
+</html>

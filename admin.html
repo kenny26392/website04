@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin dashboard | CyberKittoi</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dashboard-page">
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="index.html">
+<b>&gt;_</b>CYBER<span>KITTOI</span>
+</a>
+<nav class="site-nav">
+<a href="index.html">View site</a>
+<a class="active" href="admin.html">Admin dashboard</a>
+</nav>
+<a class="nav-action" href="login.html">Log out →</a>
+</div>
+</header>
+<main>
+<section class="dashboard-head">
+<div class="container">
+<p class="eyebrow">ADMINISTRATOR PORTAL</p>
+<h1>Control centre</h1>
+<p>Manage members, course content, and incoming messages.</p>
+</div>
+</section>
+<section class="container dashboard">
+<p class="admin-note">Admin view only — these controls are visual until the Python backend
+and authentication roles are connected.</p>
+<div class="metric-grid">
+<div class="metric">
+<strong>1,200</strong>
+<small>Total users</small>
+</div>
+<div class="metric">
+<strong>84</strong>
+<small>Active this week</small>
+</div>
+<div class="metric">
+<strong>12</strong>
+<small>Courses</small>
+</div>
+<div class="metric">
+<strong>7</strong>
+<small>New messages</small>
+</div>
+</div>
+<div class="dashboard-tabs">
+<button class="selected" data-tab="users">Users</button>
+<button data-tab="courses-panel">Courses</button>
+<button data-tab="messages">Messages</button>
+<button data-tab="site-settings">Site settings</button>
+</div>
+<div id="users" class="tab-panel selected">
+<section class="dash-card">
+<h2>User management</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>User</th>
+<th>Email</th>
+<th>Role</th>
+<th>Verified</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Demo Learner</td>
+<td>learner@example.com</td>
+<td>
+<span class="role">Learner</span>
+</td>
+<td>
+<span class="status">Active</span>
+</td>
+<td>
+<button class="small-action demo-action" data-label="View user">View user</button>
+</td>
+</tr>
+<tr>
+<td>Kittoi</td>
+<td>admin@cyberkittoi.com</td>
+<td>
+<span class="role">Admin</span>
+</td>
+<td>
+<span class="status">Active</span>
+</td>
+<td>
+<button class="small-action demo-action" data-label="View user">View user</button>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div id="courses-panel" class="tab-panel">
+<section class="dash-card">
+<h2>Course management</h2>
+<p>Upload learner resources to the appropriate learning path.</p>
+<p class="notice" id="upload-notice"></p>
+<form id="learning-file-form">
+<label for="learning-path">Learning path</label>
+<select id="learning-path" name="learningPath" required>
+<option value="Cybersecurity Essentials">Cybersecurity Essentials</option>
+<option value="Networking Fundamentals">Networking Fundamentals</option>
+<option value="Ethical Hacking Lab">Ethical Hacking Lab</option>
+<option value="Web Application Security">Web Application Security</option>
+<option value="Defense & Incident Response">Defense & Incident Response</option>
+</select>
+<label for="learning-file">Learning file</label>
+<input id="learning-file" name="file" type="file"
+accept=".pdf,.doc,.docx,.ppt,.pptx,.zip,.txt,.png,.jpg" required>
+<button class="button primary" type="submit">Upload resource →</button>
+</form>
+</section>
+</div>
+<div id="messages" class="tab-panel">
+<section class="dash-card">
+<h2>Inbox</h2>
+<p>
+<strong>7 unread</strong> messages from the contact form.</p>
+<button class="button outline demo-action" data-label="Open inbox">Open inbox →</button>
+</section>
+</div>
+<div id="site-settings" class="tab-panel">
+<section class="dash-card">
+<h2>Website settings</h2>
+<label for="site-name">Site name</label>
+<input id="site-name" value="CyberKittoi Academy">
+<label for="support-email">Support email</label>
+<input id="support-email" type="email" value="hello@cyberkittoi.com">
+<button class="button primary demo-action" data-label="Save settings">Save
+settings</button>
+</section>
+</div>
+</section>
+</main>
+<script src="script.js">
+</script>
+</body>
+</html>
